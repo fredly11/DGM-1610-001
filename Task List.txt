@@ -1,0 +1,9 @@
+1. fix ground check so can't hop next to platforms
+2. add sliders so I can't stick
+3.5. create trigger that opens pathway
+3. create a powerup that can be picked up and respawn
+4. modify powerup so I can fly.
+5. create a projectile script
+6. create an enemy derp
+7. modify player health manager so I can take damage
+8. create enemy health manager

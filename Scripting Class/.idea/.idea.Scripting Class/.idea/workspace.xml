@@ -27,16 +27,34 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+            <state relative-caret-position="390">
+              <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
               <folding>
-                <marker date="1547270646156" expanded="false" signature="6:78" ph="..." />
-                <marker date="1547270646156" expanded="true" signature="125:908" ph="{...}" />
-                <marker date="1547270646156" expanded="true" signature="375:417" ph="{...}" />
-                <marker date="1547270646156" expanded="true" signature="471:905" ph="{...}" />
-                <marker date="1547270646156" expanded="true" signature="608:673" ph="{...}" />
-                <marker date="1547270646156" expanded="true" signature="717:782" ph="{...}" />
-                <marker date="1547270646156" expanded="true" signature="838:902" ph="{...}" />
+                <marker date="1547316789215" expanded="false" signature="6:97" ph="..." />
+                <marker date="1547316789215" expanded="true" signature="166:1436" ph="{...}" />
+                <marker date="1547316789215" expanded="true" signature="438:480" ph="{...}" />
+                <marker date="1547316789215" expanded="true" signature="534:1432" ph="{...}" />
+                <marker date="1547316789215" expanded="true" signature="673:738" ph="{...}" />
+                <marker date="1547316789215" expanded="true" signature="782:847" ph="{...}" />
+                <marker date="1547316789215" expanded="true" signature="927:1077" ph="{...}" />
+                <marker date="1547316789215" expanded="true" signature="1157:1307" ph="{...}" />
+                <marker date="1547316789215" expanded="true" signature="1361:1425" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/DrawGroundCheck.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+              <folding>
+                <marker date="1547315082822" expanded="false" signature="6:78" ph="..." />
+                <marker date="1547315082822" expanded="true" signature="124:414" ph="{...}" />
+                <marker date="1547315082822" expanded="true" signature="209:216" ph="{...}" />
+                <marker date="1547315082822" expanded="true" signature="271:278" ph="{...}" />
+                <marker date="1547315082822" expanded="true" signature="315:412" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -82,6 +100,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerHealthManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DrawGroundCheck.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -90,6 +109,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player Controller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerHealthManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DrawGroundCheck.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       </list>
     </option>
@@ -99,7 +119,7 @@
       <facet id="riderModule/invalid/Default Android Facet" />
     </ignored-facets>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="240" />
     <option name="y" value="135" />
     <option name="width" value="1440" />
@@ -172,12 +192,12 @@
       <workItem from="1547059496563" duration="625000" />
       <workItem from="1547061876784" duration="880000" />
       <workItem from="1547149010333" duration="66000" />
-      <workItem from="1547268544283" duration="1765000" />
+      <workItem from="1547268544283" duration="7151000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4819000" />
+    <option name="totallyTimeSpent" value="10205000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -317,18 +337,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/DrawGroundCheck.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding>
+            <marker date="1547315082822" expanded="false" signature="6:78" ph="..." />
+            <marker date="1547315082822" expanded="true" signature="124:414" ph="{...}" />
+            <marker date="1547315082822" expanded="true" signature="209:216" ph="{...}" />
+            <marker date="1547315082822" expanded="true" signature="271:278" ph="{...}" />
+            <marker date="1547315082822" expanded="true" signature="315:412" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+        <state relative-caret-position="390">
+          <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
           <folding>
-            <marker date="1547270646156" expanded="false" signature="6:78" ph="..." />
-            <marker date="1547270646156" expanded="true" signature="125:908" ph="{...}" />
-            <marker date="1547270646156" expanded="true" signature="375:417" ph="{...}" />
-            <marker date="1547270646156" expanded="true" signature="471:905" ph="{...}" />
-            <marker date="1547270646156" expanded="true" signature="608:673" ph="{...}" />
-            <marker date="1547270646156" expanded="true" signature="717:782" ph="{...}" />
-            <marker date="1547270646156" expanded="true" signature="838:902" ph="{...}" />
+            <marker date="1547316789215" expanded="false" signature="6:97" ph="..." />
+            <marker date="1547316789215" expanded="true" signature="166:1436" ph="{...}" />
+            <marker date="1547316789215" expanded="true" signature="438:480" ph="{...}" />
+            <marker date="1547316789215" expanded="true" signature="534:1432" ph="{...}" />
+            <marker date="1547316789215" expanded="true" signature="673:738" ph="{...}" />
+            <marker date="1547316789215" expanded="true" signature="782:847" ph="{...}" />
+            <marker date="1547316789215" expanded="true" signature="927:1077" ph="{...}" />
+            <marker date="1547316789215" expanded="true" signature="1157:1307" ph="{...}" />
+            <marker date="1547316789215" expanded="true" signature="1361:1425" ph="{...}" />
           </folding>
         </state>
       </provider>
