@@ -12,6 +12,7 @@
           <e p="MainCamera.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerHealthManager.cs" t="Include" />
+          <e p="PressurePlate.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />
