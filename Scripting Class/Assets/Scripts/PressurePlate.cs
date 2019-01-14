@@ -31,7 +31,6 @@ public class PressurePlate : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		print("triggered");
 		if (other.tag == "Player")
 		{
 			isOpening = true;	

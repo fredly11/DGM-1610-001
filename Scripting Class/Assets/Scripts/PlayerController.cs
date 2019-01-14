@@ -14,12 +14,13 @@ public class PlayerController : MonoBehaviour
 	public float groundCheckRadius;
 	public LayerMask groundLayer;
 	public float friction;
-	
+	public int jumpCount;
 	
 	// Use this for initialization
 	void Start ()
 	{
 		rb = GetComponent<Rigidbody2D>();
+		jumpCount = 0;
 	}
 	
 	// Update is called once per frame
@@ -47,9 +48,16 @@ public class PlayerController : MonoBehaviour
 			if(rb.velocity.x > 0) rb.velocity = new Vector2(0, rb.velocity.y); 
 		}
 
-		if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+		if (Input.GetKeyDown(KeyCode.Space))
 		{
-			rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+			if (isGrounded)
+			{
+				rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+			} else if (jumpCount > 0)
+			{
+				rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+				jumpCount--;
+			}
 		}
 
 		
