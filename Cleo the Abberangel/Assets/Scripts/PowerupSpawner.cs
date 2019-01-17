@@ -16,8 +16,10 @@ public class PowerupSpawner : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		if (isRespawning && Time.deltaTime > currentTime + respawnTime)
+	void Update ()
+	{
+		print(currentTime);
+		if (isRespawning && Time.realtimeSinceStartup > currentTime + respawnTime)
 		{
 			SpawnPowerup();
 			isRespawning = false;

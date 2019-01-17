@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		print(jumpCount);
+	
 		isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
 		if (Input.GetAxis("Horizontal") > 0)

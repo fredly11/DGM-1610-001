@@ -15,6 +15,7 @@ public class WingPowerup : MonoBehaviour
 	void Start () {
 		player = GameObject.Find("Cleo");
 		pc = player.GetComponent<PlayerController>();
+		spawner = GameObject.Find("Powerup Spawner");
 		ps = spawner.GetComponent<PowerupSpawner>();
 	}
 	
@@ -28,11 +29,12 @@ public class WingPowerup : MonoBehaviour
 
 		if (other.tag == "Player")
 		{
-			
+			print(("Picked up"));
 			pc.jumpCount = jumpCount;
-			Destroy(this.gameObject);
 			ps.isRespawning = true;
-			ps.currentTime = Time.deltaTime;
+			ps.currentTime = Time.realtimeSinceStartup;
+			Destroy(gameObject);
+
 		}
 	}
 }
