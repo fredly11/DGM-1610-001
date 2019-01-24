@@ -8,6 +8,7 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="DrawGroundCheck.cs" t="Include" />
+          <e p="EnemyHealthManager.cs" t="Include" />
           <e p="HelloWorld.cs" t="Include" />
           <e p="MainCamera.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />

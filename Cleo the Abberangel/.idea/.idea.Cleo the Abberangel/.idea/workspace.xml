@@ -44,10 +44,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Projectile.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
+            <state relative-caret-position="752">
               <caret line="53" selection-start-line="53" selection-end-line="53" />
               <folding>
                 <marker date="1548218588751" expanded="false" signature="6:78" ph="..." />
@@ -66,11 +66,29 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/EnemyHealthManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+              <folding>
+                <marker date="1548306711001" expanded="false" signature="6:78" ph="..." />
+                <marker date="1548306711001" expanded="true" signature="127:446" ph="{...}" />
+                <marker date="1548306711001" expanded="true" signature="232:239" ph="{...}" />
+                <marker date="1548306711001" expanded="true" signature="294:301" ph="{...}" />
+                <marker date="1548306711001" expanded="true" signature="339:422" ph="{...}" />
+                <marker date="1548306711001" expanded="true" signature="401:419" ph="{...}" />
+                <marker date="1548306711001" expanded="true" signature="435:444" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../Project Legacy/Assets/Scripts/Projectile.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="75" selection-end-column="1" />
+            <state relative-caret-position="752">
+              <caret line="49" selection-start-line="49" selection-end-line="75" selection-end-column="1" />
               <folding>
                 <element signature="e#0#78#0" expanded="true" />
               </folding>
@@ -130,6 +148,7 @@
     <setting file="file://$PROJECT_DIR$/../../Project Legacy/Assets/Scripts/Projectile.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Project Legacy/Assets/Scripts/ProjectileAttack.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PowerupSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyHealthManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -139,6 +158,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/WingPowerup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ProjectileAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyHealthManager.cs" />
       </list>
     </option>
   </component>
@@ -159,14 +179,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AssemblyExplorer" />
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
+      <pane id="FileSystemExplorer" />
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
       </pane>
-      <pane id="AssemblyExplorer" />
-      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -214,11 +234,12 @@
       <workItem from="1547751064748" duration="452000" />
       <workItem from="1548095459620" duration="1920000" />
       <workItem from="1548217309268" duration="1173000" />
+      <workItem from="1548306549815" duration="166000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8199000" />
+    <option name="totallyTimeSpent" value="8365000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -307,6 +328,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ProjectileAttack.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <folding>
+            <marker date="1548098355487" expanded="false" signature="6:166" ph="..." />
+            <marker date="1548098355487" expanded="true" signature="213:1103" ph="{...}" />
+            <marker date="1548098355487" expanded="true" signature="473:480" ph="{...}" />
+            <marker date="1548098355487" expanded="true" signature="534:604" ph="{...}" />
+            <marker date="1548098355487" expanded="true" signature="572:601" ph="{...}" />
+            <marker date="1548098355487" expanded="true" signature="629:1101" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Project Legacy/Assets/Scripts/Projectile.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="752">
+          <caret line="49" selection-start-line="49" selection-end-line="75" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/WingPowerup.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -342,34 +388,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ProjectileAttack.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-          <folding>
-            <marker date="1548098355487" expanded="false" signature="6:166" ph="..." />
-            <marker date="1548098355487" expanded="true" signature="213:1103" ph="{...}" />
-            <marker date="1548098355487" expanded="true" signature="473:480" ph="{...}" />
-            <marker date="1548098355487" expanded="true" signature="534:604" ph="{...}" />
-            <marker date="1548098355487" expanded="true" signature="572:601" ph="{...}" />
-            <marker date="1548098355487" expanded="true" signature="629:1101" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../Project Legacy/Assets/Scripts/Projectile.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="75" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#78#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Projectile.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
+        <state relative-caret-position="752">
           <caret line="53" selection-start-line="53" selection-end-line="53" />
           <folding>
             <marker date="1548218588751" expanded="false" signature="6:78" ph="..." />
@@ -383,6 +404,22 @@
             <marker date="1548218588751" expanded="true" signature="974:1214" ph="{...}" />
             <marker date="1548218588751" expanded="true" signature="1032:1210" ph="{...}" />
             <marker date="1548218588751" expanded="true" signature="1071:1204" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/EnemyHealthManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+          <folding>
+            <marker date="1548306711001" expanded="false" signature="6:78" ph="..." />
+            <marker date="1548306711001" expanded="true" signature="127:446" ph="{...}" />
+            <marker date="1548306711001" expanded="true" signature="232:239" ph="{...}" />
+            <marker date="1548306711001" expanded="true" signature="294:301" ph="{...}" />
+            <marker date="1548306711001" expanded="true" signature="339:422" ph="{...}" />
+            <marker date="1548306711001" expanded="true" signature="401:419" ph="{...}" />
+            <marker date="1548306711001" expanded="true" signature="435:444" ph="{...}" />
           </folding>
         </state>
       </provider>

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212002113612434694}
   - component: {fileID: 58001281538584808}
   - component: {fileID: 50924573332578080}
+  - component: {fileID: 255669627086506930}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -122,3 +123,20 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!255 &255669627086506930
+FixedJoint2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1996890708062810}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_DampingRatio: 0
+  m_Frequency: 0
