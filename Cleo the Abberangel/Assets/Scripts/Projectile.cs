@@ -44,7 +44,7 @@ public class Projectile : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D other){
 
-		if (other.tag != "Player" && other.name != "Slider") {
+		if (other.tag != "Player" && other.tag != "Projectile" && other.name != "Slider") {
 			trigCount++;
 			if(trigCount == 1){
 				currentTime = Time.time;
@@ -52,10 +52,9 @@ public class Projectile : MonoBehaviour {
 				rb.velocity = Vector2.zero;
 				rb.gravityScale = 0;
 				stuck = true;
-				}
-
+				
 			}
 		}
 	}
 }
-}
+

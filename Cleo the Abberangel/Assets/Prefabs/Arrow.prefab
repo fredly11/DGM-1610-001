@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 58001281538584808}
   - component: {fileID: 50924573332578080}
   - component: {fileID: 255669627086506930}
+  - component: {fileID: 114989310438475756}
   m_Layer: 0
   m_Name: Arrow
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,12 +73,26 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 1.8041449, y: 0.061885316}
   serializedVersion: 2
   m_Radius: 0.24692056
+--- !u!114 &114989310438475756
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1996890708062810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd42e6ba2e46b4548abad8acb5ca39ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFlying: 1
+  flyingLife: 5
+  stuckLife: 5
 --- !u!212 &212002113612434694
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -129,7 +144,7 @@ FixedJoint2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1996890708062810}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 0}
