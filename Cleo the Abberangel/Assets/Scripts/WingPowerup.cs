@@ -7,13 +7,17 @@ public class WingPowerup : MonoBehaviour
 {
 	public GameObject spawner;
 	private GameObject player;
+	private GameObject playerArt;
 	public int jumpCount = 5;
+	private Animator playerAnimator;
 
 	private PowerupSpawner ps;
 	private PlayerController pc;
 	// Use this for initialization
 	void Start () {
 		player = GameObject.Find("Cleo");
+		playerArt = GameObject.Find("CleoArt");
+		playerAnimator = playerArt.GetComponent<Animator>();
 		pc = player.GetComponent<PlayerController>();
 		spawner = GameObject.Find("Powerup Spawner");
 		ps = spawner.GetComponent<PowerupSpawner>();
@@ -29,7 +33,6 @@ public class WingPowerup : MonoBehaviour
 
 		if (other.tag == "Player")
 		{
-			print(("Picked up"));
 			pc.jumpCount = jumpCount;
 			ps.isRespawning = true;
 			ps.currentTime = Time.realtimeSinceStartup;

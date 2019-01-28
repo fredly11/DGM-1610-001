@@ -51,6 +51,8 @@ public class Projectile : MonoBehaviour {
 				isFlying = false;
 				rb.velocity = Vector2.zero;
 				rb.gravityScale = 0;
+				fj.enabled = true;
+				fj.connectedBody = other.GetComponent<Rigidbody2D>();
 				stuck = true;
 				
 			}
