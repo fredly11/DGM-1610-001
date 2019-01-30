@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1996890708062810}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.939, y: 6.052, z: 0}
+  m_LocalPosition: {x: -27.992146, y: 5.7728906, z: 0}
   m_LocalScale: {x: 0.28712225, y: 0.17604397, z: 0.21020168}
   m_Children: []
   m_Father: {fileID: 0}
@@ -74,11 +74,11 @@ CircleCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 1.8041449, y: 0.061885316}
+  m_Offset: {x: 1.35, y: 0}
   serializedVersion: 2
-  m_Radius: 0.24692056
+  m_Radius: 0.22045283
 --- !u!114 &114989310438475756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -128,7 +128,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a106e4ece91376243ae38954fab0277d, type: 3}
+  m_Sprite: {fileID: 21300046, guid: f334ed880f8f4274ea94e44ec39ae89a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -152,6 +152,6 @@ FixedJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: -27.939, y: 6.052}
   m_DampingRatio: 0
   m_Frequency: 0
