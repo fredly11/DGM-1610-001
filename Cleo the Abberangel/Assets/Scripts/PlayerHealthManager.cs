@@ -10,8 +10,9 @@ public class PlayerHealthManager : MonoBehaviour
 
 	private EnemyDerp enemy;
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+	{
+		currentHealth = maxHealth;
 	}
 	
 	// Update is called once per frame
@@ -30,6 +31,7 @@ public class PlayerHealthManager : MonoBehaviour
 
 	void takeDamage(int damageToTake)
 	{
+		print("take damage");
 		currentHealth -= damageToTake;
 		if (currentHealth <= 0)
 		{
@@ -39,6 +41,6 @@ public class PlayerHealthManager : MonoBehaviour
 
 	void death()
 	{
-		
+		print("I died");
 	}
 }
