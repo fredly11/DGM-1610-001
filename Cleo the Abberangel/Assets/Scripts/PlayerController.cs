@@ -15,7 +15,8 @@ public class PlayerController : MonoBehaviour
 	public LayerMask groundLayer;
 	public float friction;
 	public int jumpCount;
-	
+
+	public Transform spawnPoint;
 	// Use this for initialization
 	void Start ()
 	{
