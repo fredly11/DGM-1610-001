@@ -119,7 +119,9 @@ GameObject:
   - component: {fileID: 58441577450381974}
   - component: {fileID: 50926144235585196}
   - component: {fileID: 114467054109457016}
+  - component: {fileID: 114602215255844980}
   - component: {fileID: 114556634537343536}
+  - component: {fileID: 114507651610734482}
   m_Layer: 9
   m_Name: Cleo
   m_TagString: Player
@@ -279,7 +281,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1574538553119524}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.85145587, y: -0.22612044, z: 0}
+  m_LocalPosition: {x: 0.8514559, y: -0.18, z: 0}
   m_LocalScale: {x: 0.91234887, y: 0.91234857, z: 0.91234857}
   m_Children: []
   m_Father: {fileID: 4184549018086396}
@@ -292,7 +294,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1383638555901620}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.8697861, y: -0.18128674, z: 0}
+  m_LocalPosition: {x: -0.8697861, y: -0.18, z: 0}
   m_LocalScale: {x: 0.86887044, y: 0.8688701, z: 0.8688701}
   m_Children:
   - {fileID: 4774147751393406}
@@ -396,7 +398,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1663018013655344}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0074061234, y: 1.7816709, z: 0}
+  m_LocalPosition: {x: 0.007406123, y: 1.7816709, z: 0}
   m_LocalScale: {x: 0.7223418, y: 0.7223417, z: 0.7223417}
   m_Children:
   - {fileID: 4730746115656952}
@@ -463,7 +465,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1415916322565414}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.051270925, y: 1.1206527, z: 0}
+  m_LocalPosition: {x: 0.05127092, y: 1.1206527, z: 0}
   m_LocalScale: {x: 1.0465972, y: 1.0465971, z: 1.0465971}
   m_Children: []
   m_Father: {fileID: 4591164045535142}
@@ -610,15 +612,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGrounded: 0
-  moveSpeed: 6
-  jumpForce: 11
-  groundCheck: {fileID: 4897854075824966}
-  groundCheckRadius: 0.33
+  moveSpeed: 0
+  jumpForce: 0
+  groundCheck: {fileID: 0}
+  groundCheckRadius: 0
   groundLayer:
     serializedVersion: 2
-    m_Bits: 1024
-  friction: 1.46
-  jumpCount: 5
+    m_Bits: 0
+  friction: 0
+  jumpCount: 0
+  spawnPoint: {fileID: 0}
+--- !u!114 &114507651610734482
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1240569782568650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 346eb22cfc4a4ad48b9186640158780c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  currentHealth: 10
 --- !u!114 &114556634537343536
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -630,10 +646,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3375ef9d69e9fa1489d48069e1e9e525, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 1996890708062810, guid: 62470f65980afbb4991394a12059f080, type: 2}
-  firePoint: {fileID: 4273658184325124}
+  projectile: {fileID: 0}
+  firePoint: {fileID: 0}
   thrust: 15
   mainCam: {fileID: 0}
+--- !u!114 &114602215255844980
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1240569782568650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0978d4106e4c6d447be0278f79c41402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114738692624317502
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -645,7 +672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a504e0dbb6277684cade9d1b39786e39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundCheckRadius: 0.34
+  groundCheckRadius: 0
 --- !u!212 &212109962604518028
 SpriteRenderer:
   m_ObjectHideFlags: 1

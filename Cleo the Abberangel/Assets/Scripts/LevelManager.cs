@@ -20,7 +20,7 @@ public class LevelManager : MonoBehaviour
 	void Respawn()
 	{
 		playerController.gameObject.SetActive(false);
-		playerController.transform.position = playerController.spawnPoint;
+		playerController.transform.position = playerController.spawnPoint.position;
 		playerController.gameObject.SetActive(true);
 	}
 }
