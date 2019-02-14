@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerHealthManager : MonoBehaviour
 {
-	public float maxHealth;
-
-	public float currentHealth;
+	public FloatData maxHealth;
+	public FloatData currentHealth;
+	public UnityEvent damageEvent;
 
 	private EnemyDerp enemy;
 	// Use this for initialization
@@ -25,15 +26,15 @@ public class PlayerHealthManager : MonoBehaviour
 		if (other.gameObject.tag == "Enemy")
 		{
 			enemy = other.gameObject.GetComponent<EnemyDerp>();
-			takeDamage(enemy.damage);
+			damageEvent.Invoke();
 		}
 	}
 
 	void takeDamage(int damageToTake)
 	{
 		print("take damage");
-		currentHealth -= damageToTake;
-		if (currentHealth <= 0)
+		currentHealth.value -= damageToTake;
+		if (currentHealth.value <= 0)
 		{
 		death();	
 		}

@@ -545,6 +545,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114507651610734482, guid: a2f7c7d7c8a815147be8a5d723f56d63,
+        type: 2}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114507651610734482, guid: a2f7c7d7c8a815147be8a5d723f56d63,
+        type: 2}
+      propertyPath: damageEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4574957466365448, guid: a2f7c7d7c8a815147be8a5d723f56d63, type: 2}
       propertyPath: m_LocalPosition.x
       value: -29.51
@@ -623,6 +633,48 @@ Prefab:
       propertyPath: mainCam
       value: 
       objectReference: {fileID: 534669904}
+    - target: {fileID: 114507651610734482, guid: a2f7c7d7c8a815147be8a5d723f56d63,
+        type: 2}
+      propertyPath: currentHealth
+      value: 
+      objectReference: {fileID: 11400000, guid: 128263e828d0722419f4a28a50575645,
+        type: 2}
+    - target: {fileID: 114507651610734482, guid: a2f7c7d7c8a815147be8a5d723f56d63,
+        type: 2}
+      propertyPath: maxHealth
+      value: 
+      objectReference: {fileID: 11400000, guid: f185f2673ef584240a941eeb3dc0d321,
+        type: 2}
+    - target: {fileID: 114507651610734482, guid: a2f7c7d7c8a815147be8a5d723f56d63,
+        type: 2}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114507651610734482, guid: a2f7c7d7c8a815147be8a5d723f56d63,
+        type: 2}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114507651610734482, guid: a2f7c7d7c8a815147be8a5d723f56d63,
+        type: 2}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1227183179}
+    - target: {fileID: 114507651610734482, guid: a2f7c7d7c8a815147be8a5d723f56d63,
+        type: 2}
+      propertyPath: damageEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114507651610734482, guid: a2f7c7d7c8a815147be8a5d723f56d63,
+        type: 2}
+      propertyPath: damageEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114507651610734482, guid: a2f7c7d7c8a815147be8a5d723f56d63,
+        type: 2}
+      propertyPath: damageEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1227183179}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2f7c7d7c8a815147be8a5d723f56d63, type: 2}
   m_IsPrefabParent: 0
