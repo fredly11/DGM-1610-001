@@ -8,7 +8,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeaa52d0b499ef045a16192bf3e49dc8, type: 3}
-  m_Name: EnemyMaxHealth
+  m_Script: {fileID: 11500000, guid: f18cc58071f7ada4ba103a4f07aecf08, type: 3}
+  m_Name: Health Powerup
   m_EditorClassIdentifier: 
-  value: 0
+  value: 5

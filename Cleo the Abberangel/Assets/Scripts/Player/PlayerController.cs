@@ -14,14 +14,13 @@ public class PlayerController : MonoBehaviour
 	public float groundCheckRadius;
 	public LayerMask groundLayer;
 	public float friction;
-	public int jumpCount;
+	public FloatData jumpCount;
 
 	public Transform spawnPoint;
 	// Use this for initialization
 	void Start ()
 	{
 		rb = GetComponent<Rigidbody2D>();
-		jumpCount = 0;
 	}
 	
 	// Update is called once per frame
@@ -54,10 +53,10 @@ public class PlayerController : MonoBehaviour
 			if (isGrounded)
 			{
 				rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-			} else if (jumpCount > 0)
+			} else if (jumpCount.value > 0)
 			{
 				rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-				jumpCount--;
+				jumpCount.value--;
 			}
 		}
 

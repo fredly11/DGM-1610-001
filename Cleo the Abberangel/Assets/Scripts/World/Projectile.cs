@@ -13,6 +13,7 @@ public class Projectile : MonoBehaviour {
 	float startTime;
 	int trigCount;
 	private bool stuck = false;
+	private CircleCollider2D collider;
 
 
 	
@@ -20,6 +21,7 @@ public class Projectile : MonoBehaviour {
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
 		fj = GetComponent<FixedJoint2D> ();
+		collider = GetComponent<CircleCollider2D>();
 		isFlying = true;
 		startTime = Time.time;
 		trigCount = 0;
@@ -54,7 +56,7 @@ public class Projectile : MonoBehaviour {
 				fj.enabled = true;
 				fj.connectedBody = other.GetComponent<Rigidbody2D>();
 				stuck = true;
-				
+				collider.enabled = false;
 			}
 		}
 	}

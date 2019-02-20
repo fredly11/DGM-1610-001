@@ -5,40 +5,35 @@ using UnityEngine.Events;
 
 public class PlayerHealthManager : MonoBehaviour
 {
-	public FloatData maxHealth;
-	public FloatData currentHealth;
+	public FloatData health;
 	public UnityEvent damageEvent;
+	public float enemyDamage;
+	
 
-	private EnemyDerp enemy;
 	// Use this for initialization
 	void Start ()
 	{
-		currentHealth = maxHealth;
+	
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (health.value <= 0)
+		{
+			death();
+		} 
 	}
 
 	private void OnCollisionEnter2D(Collision2D other)
 	{
 		if (other.gameObject.tag == "Enemy")
 		{
-			enemy = other.gameObject.GetComponent<EnemyDerp>();
+			enemyDamage = other.gameObject.GetComponent<EnemyDerp>().damage.value;
+
 			damageEvent.Invoke();
 		}
 	}
 
-	void takeDamage(int damageToTake)
-	{
-		print("take damage");
-		currentHealth.value -= damageToTake;
-		if (currentHealth.value <= 0)
-		{
-		death();	
-		}
-	}
 
 	void death()
 	{

@@ -6,7 +6,8 @@ public class EnemyDerp : MonoBehaviour
 {
 	private Rigidbody2D rb;
 	public Transform player;
-	public int damage;
+	public FloatData health;
+	public FloatData damage;
 
 	public float moveSpeed;
 	// Use this for initialization

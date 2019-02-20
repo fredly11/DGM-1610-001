@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PressurePlate : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class PressurePlate : MonoBehaviour
 	public Transform targetPoint;
 	public float openSpeed;
 	public bool isOpening = false;
+
+	public UnityEvent triggered;
 	// Use this for initialization
 	void Start () {
 		
@@ -34,6 +37,7 @@ public class PressurePlate : MonoBehaviour
 		if (other.tag == "Player")
 		{
 			isOpening = true;	
+			triggered.Invoke();
 		}
 	}
 }
