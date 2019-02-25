@@ -13,6 +13,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Game Values/FloatData.cs">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="144">
               <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
               <folding>
@@ -23,6 +24,37 @@
                 <marker date="1550804746739" expanded="true" signature="398:450" ph="{...}" />
                 <marker date="1550804746739" expanded="true" signature="510:556" ph="{...}" />
                 <marker date="1550804746739" expanded="true" signature="600:640" ph="{...}" />
+=======
+            <state relative-caret-position="408">
+              <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+              <folding>
+                <marker date="1550688455409" expanded="false" signature="6:78" ph="..." />
+                <marker date="1550688455409" expanded="true" signature="138:642" ph="{...}" />
+                <marker date="1550688455409" expanded="true" signature="249:289" ph="{...}" />
+                <marker date="1550688455409" expanded="true" signature="333:456" ph="{...}" />
+                <marker date="1550688455409" expanded="true" signature="398:450" ph="{...}" />
+                <marker date="1550688455409" expanded="true" signature="510:556" ph="{...}" />
+                <marker date="1550688455409" expanded="true" signature="600:640" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerHealthManager.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealthManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+              <folding>
+                <marker date="1550689457980" expanded="false" signature="6:104" ph="..." />
+                <marker date="1550689457980" expanded="true" signature="154:653" ph="{...}" />
+                <marker date="1550689457980" expanded="true" signature="291:299" ph="{...}" />
+                <marker date="1550689457980" expanded="true" signature="354:404" ph="{...}" />
+                <marker date="1550689457980" expanded="true" signature="380:400" ph="{...}" />
+                <marker date="1550689457980" expanded="true" signature="457:610" ph="{...}" />
+                <marker date="1550689457980" expanded="true" signature="499:607" ph="{...}" />
+                <marker date="1550689457980" expanded="true" signature="626:651" ph="{...}" />
+>>>>>>> Stashed changes
               </folding>
             </state>
           </provider>
@@ -228,14 +260,22 @@
       <workItem from="1549775272499" duration="298000" />
       <workItem from="1550036011275" duration="743000" />
       <workItem from="1550097071699" duration="2448000" />
+<<<<<<< Updated upstream
       <workItem from="1550681301041" duration="7736000" />
       <workItem from="1550805362726" duration="1197000" />
       <workItem from="1550806589465" duration="385000" />
+=======
+      <workItem from="1550681301041" duration="8079000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="29202000" />
+=======
+    <option name="totallyTimeSpent" value="27963000" />
+>>>>>>> Stashed changes
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -247,7 +287,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< Updated upstream
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+=======
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+>>>>>>> Stashed changes
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26107383" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -389,6 +433,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealthManager.cs">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="470">
           <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
           <folding>
@@ -400,6 +445,19 @@
             <marker date="1550806734005" expanded="true" signature="482:635" ph="{...}" />
             <marker date="1550806734005" expanded="true" signature="524:632" ph="{...}" />
             <marker date="1550806734005" expanded="true" signature="651:690" ph="{...}" />
+=======
+        <state relative-caret-position="476">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <marker date="1550689457980" expanded="false" signature="6:104" ph="..." />
+            <marker date="1550689457980" expanded="true" signature="154:653" ph="{...}" />
+            <marker date="1550689457980" expanded="true" signature="291:299" ph="{...}" />
+            <marker date="1550689457980" expanded="true" signature="354:404" ph="{...}" />
+            <marker date="1550689457980" expanded="true" signature="380:400" ph="{...}" />
+            <marker date="1550689457980" expanded="true" signature="457:610" ph="{...}" />
+            <marker date="1550689457980" expanded="true" signature="499:607" ph="{...}" />
+            <marker date="1550689457980" expanded="true" signature="626:651" ph="{...}" />
+>>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
