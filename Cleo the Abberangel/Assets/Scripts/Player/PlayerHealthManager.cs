@@ -8,7 +8,8 @@ public class PlayerHealthManager : MonoBehaviour
 	public FloatData health;
 	public UnityEvent damageEvent;
 	public float enemyDamage;
-	public LevelManager lm;
+
+	public UnityEvent deathEvent;
 	
 
 	// Use this for initialization
@@ -38,7 +39,8 @@ public class PlayerHealthManager : MonoBehaviour
 
 	void death()
 	{
-		print("Died");
-		lm.Respawn();
+		deathEvent.Invoke();
+
+
 	}
 }
