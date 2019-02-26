@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -667,6 +667,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114467054109457016, guid: a2f7c7d7c8a815147be8a5d723f56d63,
+        type: 2}
+      propertyPath: flipEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 114507651610734482, guid: a2f7c7d7c8a815147be8a5d723f56d63,
         type: 2}
       propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.size
@@ -969,6 +974,36 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114556634537343536, guid: a2f7c7d7c8a815147be8a5d723f56d63,
+        type: 2}
+      propertyPath: minThrust
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114556634537343536, guid: a2f7c7d7c8a815147be8a5d723f56d63,
+        type: 2}
+      propertyPath: maxThrust
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114556634537343536, guid: a2f7c7d7c8a815147be8a5d723f56d63,
+        type: 2}
+      propertyPath: thrustGain
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114467054109457016, guid: a2f7c7d7c8a815147be8a5d723f56d63,
+        type: 2}
+      propertyPath: flipEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114467054109457016, guid: a2f7c7d7c8a815147be8a5d723f56d63,
+        type: 2}
+      propertyPath: flipEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114467054109457016, guid: a2f7c7d7c8a815147be8a5d723f56d63,
+        type: 2}
+      propertyPath: flipEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1227183179}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2f7c7d7c8a815147be8a5d723f56d63, type: 2}
   m_IsPrefabParent: 0

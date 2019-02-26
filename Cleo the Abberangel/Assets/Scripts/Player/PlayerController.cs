@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
@@ -15,8 +16,9 @@ public class PlayerController : MonoBehaviour
 	public LayerMask groundLayer;
 	public float friction;
 	public FloatData jumpCount;
-
+	private bool facingright = true;
 	public Transform spawnPoint;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -31,10 +33,14 @@ public class PlayerController : MonoBehaviour
 
 		if (Input.GetAxis("Horizontal") > 0)
 		{
+			if (!facingright)Flip();
+			facingright = true;
 			rb.velocity = new Vector2(moveSpeed, rb.velocity.y);	
 		}
 		else if (Input.GetAxis("Horizontal") < 0)
 		{
+			if(facingright)Flip();
+			facingright = false;
 			rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
 		}
 		else if (Input.GetAxis("Horizontal") == 0 && isGrounded && rb.velocity.x > 0)
@@ -61,6 +67,11 @@ public class PlayerController : MonoBehaviour
 		}
 
 		
+	}
+
+	void Flip()
+	{
+		transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y);
 	}
 
 
