@@ -7,6 +7,7 @@ public class Blink : MonoBehaviour {
 	private RaycastHit2D hit;
 	private GameObject targetProjectile;
 
+	public Camera mainCamera;
 	// Use this for initialization
 	void Start () {
 		
@@ -16,14 +17,14 @@ public class Blink : MonoBehaviour {
 	void Update () {
 		var mousePos = Input.mousePosition;
 		mousePos.z = 15;
-		Vector2 rayPos = new Vector2(Camera.main.ScreenToWorldPoint (mousePos).x, Camera.main.ScreenToWorldPoint (mousePos).y );
+		Vector2 rayPos = new Vector2(mainCamera.ScreenToWorldPoint (mousePos).x, mainCamera.ScreenToWorldPoint (mousePos).y );
 
-		if (Physics2D.Raycast (rayPos, Vector2.zero, 0f)) {
-			hit = Physics2D.Raycast (rayPos, Vector2.zero, 0f);
-
+		if (Physics2D.Raycast (rayPos, Vector2.zero, 0f))
+		{
+			hit = Physics2D.Raycast(rayPos, Vector2.zero, 0f);
 			if (hit.collider.name == "Blink Area") {
 				targetProjectile = hit.collider.gameObject.transform.parent.gameObject;
-				Debug.Log ("BLink Area");
+				Debug.Log ("Blink Area");
 			} else {
 				targetProjectile = hit.collider.gameObject;
 			}
