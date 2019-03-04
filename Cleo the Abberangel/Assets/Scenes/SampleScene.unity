@@ -1121,7 +1121,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 1
+  orthographic: 0
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -1145,7 +1145,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: -29.6, y: 5.3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6963,13 +6963,15 @@ GameObject:
   - component: {fileID: 1627461642}
   - component: {fileID: 1627461638}
   - component: {fileID: 1627461639}
+  - component: {fileID: 1627461643}
+  - component: {fileID: 1627461644}
   m_Layer: 0
   m_Name: Turtle
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &1627461638
 Rigidbody2D:
   serializedVersion: 4
@@ -7039,7 +7041,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300050, guid: f334ed880f8f4274ea94e44ec39ae89a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7075,9 +7077,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1227183186}
-  health: {fileID: 11400000, guid: f3eb4bba98ab2134c96d0f84deaed538, type: 2}
   damage: {fileID: 11400000, guid: ea86dff3a8d700c4fa434198b08e8ebc, type: 2}
   moveSpeed: 1
+--- !u!114 &1627461643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1627461637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 872dca603ab84754297b5c206e0bfdac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 11400000, guid: f3eb4bba98ab2134c96d0f84deaed538, type: 2}
+  knockDownEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1627461642}
+        m_MethodName: KnockDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  playerDamage: {fileID: 11400000, guid: 523f3ed73150c964fa3be9e1dd6f5013, type: 2}
+--- !u!58 &1627461644
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1627461637}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.30190074, y: 0.34999996}
+  serializedVersion: 2
+  m_Radius: 1.8987254
 --- !u!1001 &1695304336
 Prefab:
   m_ObjectHideFlags: 0
@@ -7087,15 +7137,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4314951312616360, guid: 62470f65980afbb4991394a12059f080, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -27.9775
+      value: -36.33
       objectReference: {fileID: 0}
     - target: {fileID: 4314951312616360, guid: 62470f65980afbb4991394a12059f080, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 6.766239
+      value: 7.96
       objectReference: {fileID: 0}
     - target: {fileID: 4314951312616360, guid: 62470f65980afbb4991394a12059f080, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -2.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4314951312616360, guid: 62470f65980afbb4991394a12059f080, type: 2}
       propertyPath: m_LocalRotation.x

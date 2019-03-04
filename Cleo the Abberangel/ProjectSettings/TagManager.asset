@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Projectile
   - Enemy
+  - Knocked Down
+  - Blink
   layers:
   - Default
   - TransparentFX

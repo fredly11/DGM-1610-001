@@ -32,7 +32,8 @@ public class PlayerHealthManager : MonoBehaviour
 		{
 			enemyDamage = other.gameObject.GetComponent<EnemyDerp>().damage.value;
 
-			damageEvent.Invoke();
+			health.value -= enemyDamage;
+
 		}
 	}
 
@@ -40,7 +41,5 @@ public class PlayerHealthManager : MonoBehaviour
 	void death()
 	{
 		deathEvent.Invoke();
-
-
 	}
 }
