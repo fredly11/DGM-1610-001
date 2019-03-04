@@ -10,7 +10,7 @@ public class PlayerHealthManager : MonoBehaviour
 	public float enemyDamage;
 
 	public UnityEvent deathEvent;
-	
+	private bool deathTriggered;
 
 	// Use this for initialization
 	void Start ()
@@ -20,7 +20,7 @@ public class PlayerHealthManager : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-		if (health.value <= 0)
+		if (health.value <= 0 && !deathTriggered)
 		{
 			death();
 		} 
@@ -40,6 +40,7 @@ public class PlayerHealthManager : MonoBehaviour
 
 	void death()
 	{
+		deathTriggered = true;
 		deathEvent.Invoke();
 	}
 }
