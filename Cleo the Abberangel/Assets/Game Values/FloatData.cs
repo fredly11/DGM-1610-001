@@ -4,9 +4,25 @@ using UnityEngine;
 [CreateAssetMenu]
 public class FloatData : ScriptableObject
 {
-    public float value;
-    public float startValue;
-    public float maxValue;
+    [SerializeField] private float value;
+    [SerializeField] private float startValue;
+    [SerializeField] private float maxValue;
+
+    public float Value
+    {
+        get { return value;}
+        set { this.value = value;}
+    }
+    public float StartValue
+    {
+        get { return startValue;}
+        set { this.startValue = value;}
+    }
+    public float MaxValue
+    {
+        get { return maxValue;}
+        set { this.maxValue = value;}
+    }
 
     private void OnEnable()
     {
@@ -18,17 +34,13 @@ public class FloatData : ScriptableObject
         value += valueToAdd;
         if (value > maxValue)
         {
-            setValue(maxValue);
+            Value = maxValue;
         }
     }
 
-    public void subtractValue(float valueToSubtract)
+    public void addValue(FloatData floatObj)
     {
-        value -= valueToSubtract;
+        Value += floatObj.Value;
     }
 
-    public void setValue(float valueToSet)
-    {
-        value = valueToSet;
-    }
 }

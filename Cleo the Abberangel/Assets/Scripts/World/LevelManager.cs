@@ -30,7 +30,7 @@ public class LevelManager : MonoBehaviour
 					
 			playerController.transform.position = playerController.spawnPoint.position;
 			playerController.gameObject.SetActive(true);
-			health.value = health.maxValue;
+			health.Value = health.MaxValue;
 			respawnStart = false;
 
 		}

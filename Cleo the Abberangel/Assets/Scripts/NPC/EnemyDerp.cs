@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class EnemyDerp : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class EnemyDerp : MonoBehaviour
 	void Start ()
 	{
 		rb = GetComponent<Rigidbody2D>();
+		player = GameObject.Find("Cleo").transform;
 	}
 	
 	// Update is called once per frame

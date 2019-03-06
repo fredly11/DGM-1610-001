@@ -6,8 +6,11 @@ using UnityEngine.Events;
 public class PlayerHealthManager : MonoBehaviour
 {
 	public FloatData health;
-	public UnityEvent damageEvent;
-	public float enemyDamage;
+	[System.Serializable]
+	public class DamageEvent : UnityEvent<FloatData>{}
+
+	public DamageEvent damageEvent;
+
 
 	public UnityEvent deathEvent;
 	private bool deathTriggered;
@@ -15,12 +18,14 @@ public class PlayerHealthManager : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-	
+	if(damageEvent == null)damageEvent = new DamageEvent();
+
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (health.value <= 0 && !deathTriggered)
+		if (health.Value <= 0 && !deathTriggered)
 		{
 			death();
 		} 
@@ -30,10 +35,9 @@ public class PlayerHealthManager : MonoBehaviour
 	{
 		if (other.gameObject.tag == "Enemy")
 		{
-			enemyDamage = other.gameObject.GetComponent<EnemyDerp>().damage.value;
-
-			health.value -= enemyDamage;
-
+			
+		damageEvent.Invoke(other.gameObject.GetComponent<EnemyDerp>().damage);
+	
 		}
 	}
 

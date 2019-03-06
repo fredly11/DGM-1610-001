@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
 	void Start ()
 	{
 		rb = GetComponent<Rigidbody2D>();
+		groundLayer = LayerMask.GetMask("World");
 	}
 	
 	// Update is called once per frame
@@ -59,10 +60,10 @@ public class PlayerController : MonoBehaviour
 			if (isGrounded)
 			{
 				rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-			} else if (jumpCount.value > 0)
+			} else if (jumpCount.Value > 0)
 			{
 				rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-				jumpCount.value--;
+				jumpCount.Value--;
 			}
 		}
 

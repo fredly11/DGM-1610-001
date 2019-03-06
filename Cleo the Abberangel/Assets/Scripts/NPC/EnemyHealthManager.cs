@@ -9,6 +9,7 @@ public class EnemyHealthManager : MonoBehaviour
 	private bool knockedDown;
 	public UnityEvent knockDownEvent;
 	public UnityEvent deathEvent;
+	public UnityEvent damageEvent;
 	public FloatData playerDamage;
 
 	// Use this for initialization
@@ -23,10 +24,10 @@ public class EnemyHealthManager : MonoBehaviour
 
 	}
 
-	public void TakeDamage(float damageToTake)
+	public void TakeDamage()
 	{
-		health.value -= damageToTake;
-		if (health.value <= 0)
+		damageEvent.Invoke();
+		if (health.Value <= 0)
 		{
 			knockedDown = true;
 			knockDownEvent.Invoke();
@@ -46,7 +47,7 @@ public class EnemyHealthManager : MonoBehaviour
 			print("Arrow Collision");
 			if (!knockedDown)
 			{
-				TakeDamage(playerDamage.value);
+				TakeDamage();
 			}
 			else
 			{
