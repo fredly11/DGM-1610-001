@@ -12,6 +12,7 @@ public class EnemyHealthManager : MonoBehaviour
 	public UnityEvent damageEvent;
 	public FloatData playerDamage;
 
+	private int trigCount;
 	// Use this for initialization
 	void Start()
 	{
@@ -44,14 +45,20 @@ public class EnemyHealthManager : MonoBehaviour
 
 		if (other.gameObject.tag == "Projectile")
 		{
-			print("Arrow Collision");
-			if (!knockedDown)
+			trigCount++;
+			if (trigCount == 1)
 			{
-				TakeDamage();
-			}
-			else
-			{
-				Die();
+				trigCount = 0;
+				print("Arrow Collision");
+				if (!knockedDown)
+				{
+					TakeDamage();
+			
+				}
+				else
+				{
+					Die();
+				}
 			}
 		}
 	}

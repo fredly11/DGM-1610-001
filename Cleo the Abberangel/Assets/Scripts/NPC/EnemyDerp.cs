@@ -38,5 +38,10 @@ public class EnemyDerp : MonoBehaviour
 		gameObject.tag = "Knocked Down";
 	}
 
+	public void Death()
+	{
+		Destroy(gameObject);
+	}
+
 
 }

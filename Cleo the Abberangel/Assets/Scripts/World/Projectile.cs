@@ -46,7 +46,7 @@ public class Projectile : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D other){
 
-		if (other.tag != "Player" && other.tag != "Projectile" && other.name != "Slider" && other.tag != "Blink") {
+		if (other.tag != "Player" && other.tag != "Projectile" && other.name != "Slider" && other.tag != "Blink" && other.tag != "NoProjectileCollision") {
 			trigCount++;
 			if(trigCount == 1){
 				currentTime = Time.time;
