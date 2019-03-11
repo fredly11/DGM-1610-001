@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeaa52d0b499ef045a16192bf3e49dc8, type: 3}
   m_Name: PlayerDamage
   m_EditorClassIdentifier: 
-  value: 10
-  startValue: 10
-  maxValue: 10
+  value: -10
+  startValue: -10
+  maxValue: -10
