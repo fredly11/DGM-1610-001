@@ -43,4 +43,8 @@ public class FloatData : ScriptableObject
         Value += floatObj.Value;
     }
 
+    public float percentage()
+    {
+        return (value / maxValue) * 100;
+    }
 }

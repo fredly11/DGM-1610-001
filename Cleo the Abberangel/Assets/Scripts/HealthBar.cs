@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
 	public Image barImage;
+	public Text barText;
 	public FloatData fillData;
 	 
 	// Use this for initialization
@@ -18,5 +19,6 @@ public class HealthBar : MonoBehaviour
 	void Update ()
 	{
 		barImage.fillAmount = fillData.Value / fillData.MaxValue;
+		barText.text = fillData.percentage().ToString() + "%";
 	}
 }
