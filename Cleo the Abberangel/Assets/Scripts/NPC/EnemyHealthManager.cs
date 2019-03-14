@@ -46,7 +46,7 @@ public class EnemyHealthManager : MonoBehaviour
 		if (other.gameObject.tag == "Projectile")
 		{
 			trigCount++;
-			if (trigCount == 1)
+			if (trigCount == 2)
 			{
 				trigCount = 0;
 				print("Arrow Collision");

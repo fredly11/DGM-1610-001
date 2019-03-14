@@ -48,7 +48,7 @@ public class Projectile : MonoBehaviour {
 
 		if (other.tag != "Player" && other.tag != "Projectile" && other.name != "Slider" && other.tag != "Blink" && other.tag != "NoProjectileCollision") {
 			trigCount++;
-			if(trigCount == 1){
+			if(trigCount == 2){
 				currentTime = Time.time;
 				isFlying = false;
 				rb.velocity = Vector2.zero;

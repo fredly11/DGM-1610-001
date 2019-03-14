@@ -16,6 +16,7 @@
           <e p="EnemySpawner.cs" t="Include" />
           <e p="FightRoom.cs" t="Include" />
           <e p="HealthBar.cs" t="Include" />
+          <e p="KeyDoor.cs" t="Include" />
           <e p="MonoEvents.cs" t="Include" />
           <e p="NPC" t="Include">
             <e p="Animal.cs" t="Include" />
