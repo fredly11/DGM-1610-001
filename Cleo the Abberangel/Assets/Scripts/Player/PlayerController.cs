@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
 			if(facingright)Flip();
 			facingright = false;
 			rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
+			print("Printing");
 		}
 		else if (Input.GetAxis("Horizontal") == 0 && isGrounded && rb.velocity.x > 0)
 		{
