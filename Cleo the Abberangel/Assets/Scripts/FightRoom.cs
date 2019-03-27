@@ -11,11 +11,13 @@ public class FightRoom : MonoBehaviour
 	private bool isTriggered;
 	public UnityEvent triggerEvent;
 	public UnityEvent completeEvent;
+	private bool complete;
 
 	private void Update()
 	{
-		if (completedSpawners == spawners)
+		if (completedSpawners == spawners && !complete)
 		{
+			complete = true;
 			completeEvent.Invoke();
 		}	
 	}
