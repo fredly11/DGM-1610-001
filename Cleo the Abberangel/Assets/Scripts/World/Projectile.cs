@@ -47,8 +47,6 @@ public class Projectile : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 
 		if (other.tag != "Player" && other.tag != "Projectile" && other.name != "Slider" && other.tag != "Blink" && other.tag != "NoProjectileCollision") {
-			trigCount++;
-			if(trigCount == 2){
 				currentTime = Time.time;
 				isFlying = false;
 				rb.velocity = Vector2.zero;
@@ -57,7 +55,7 @@ public class Projectile : MonoBehaviour {
 				fj.connectedBody = other.GetComponent<Rigidbody2D>();
 				stuck = true;
 				collider.enabled = false;
-			}
+			
 		}
 	}
 }

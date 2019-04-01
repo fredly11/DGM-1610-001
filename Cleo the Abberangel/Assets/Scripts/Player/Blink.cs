@@ -7,6 +7,7 @@ public class Blink : MonoBehaviour {
 	private RaycastHit2D hit;
 	private GameObject targetProjectile;
 
+
 	public Camera mainCamera;
 	// Use this for initialization
 	void Start () {
@@ -17,8 +18,7 @@ public class Blink : MonoBehaviour {
 	void Update () {
 		var mousePos = Input.mousePosition;
 		mousePos.z = 15;
-		Vector2 rayPos = new Vector2(mainCamera.ScreenToWorldPoint (mousePos).x, mainCamera.ScreenToWorldPoint (mousePos).y );
-
+		var rayPos = new Vector2(mainCamera.ScreenToWorldPoint (mousePos).x, mainCamera.ScreenToWorldPoint (mousePos).y );
 		if (Physics2D.Raycast (rayPos, Vector2.zero, 0f))
 		{
 			hit = Physics2D.Raycast(rayPos, Vector2.zero, 0f);
@@ -28,12 +28,12 @@ public class Blink : MonoBehaviour {
 			} else {
 				targetProjectile = hit.collider.gameObject;
 			}
-			Projectile targetScript = targetProjectile.GetComponent<Projectile>();
+		   /* Projectile targetScript = targetProjectile.GetComponent<Projectile>();
 			if (targetScript.isFlying) {
 				canBlink = false;
 			} else {
 				canBlink = true;
-			}
+			}*/
 			//Debug.Log(hit.collider.name);
 		} else {
 			canBlink = false;
