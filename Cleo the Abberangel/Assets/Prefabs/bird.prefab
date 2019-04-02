@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1992376525019212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.609097, y: 9.36304, z: 0}
+  m_LocalPosition: {x: -26.33399, y: 9.222755, z: 0}
   m_LocalScale: {x: 0.18685114, y: 0.18685114, z: 0.18685114}
   m_Children: []
   m_Father: {fileID: 0}
@@ -130,7 +130,29 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   deathEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114557615324418870}
+        m_MethodName: Death
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 0c87ffef70a5b804f9ee06ea026f118e, type: 2}
+        m_MethodName: addObject
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1992376525019212}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   damageEvent:

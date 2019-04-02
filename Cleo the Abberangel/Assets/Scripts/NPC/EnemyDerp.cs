@@ -40,7 +40,7 @@ public class EnemyDerp : MonoBehaviour
 
 	public void Death()
 	{
-		Destroy(gameObject);
+		gameObject.active = false;
 	}
 
 
