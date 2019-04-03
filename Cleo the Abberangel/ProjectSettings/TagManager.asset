@@ -9,6 +9,8 @@ TagManager:
   - Knocked Down
   - Blink
   - NoProjectileCollision
+  - ProjectileBreaker
+  - PowerUp
   layers:
   - Default
   - TransparentFX

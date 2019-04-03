@@ -11,7 +11,6 @@ public class Projectile : MonoBehaviour {
 	public float stuckLife = 0;
 	float currentTime;
 	float startTime;
-	int trigCount;
 	private bool stuck = false;
 	private CircleCollider2D collider;
 
@@ -24,7 +23,7 @@ public class Projectile : MonoBehaviour {
 		collider = GetComponent<CircleCollider2D>();
 		isFlying = true;
 		startTime = Time.time;
-		trigCount = 0;
+		
 	}
 	
 	// Update is called once per frame
@@ -46,6 +45,10 @@ public class Projectile : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D other){
 
+		if (other.tag == "ProjectileBreaker")
+		{
+			Destroy(gameObject);
+		}
 		if (other.tag != "Player" && other.tag != "Projectile" && other.name != "Slider" && other.tag != "Blink" && other.tag != "NoProjectileCollision") {
 				currentTime = Time.time;
 				isFlying = false;

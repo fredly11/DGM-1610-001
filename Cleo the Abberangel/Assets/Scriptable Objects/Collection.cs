@@ -7,6 +7,10 @@ public class Collection : ScriptableObject
 
     public List<Object> collection;
 
+    private void OnEnable()
+    {
+        collection.Clear();
+    }
 
     public void addObject(Object item)
     {
@@ -19,5 +23,10 @@ public class Collection : ScriptableObject
         {
             Debug.Log(Object.name);
         }
+    }
+
+    public void Empty()
+    {
+       collection.Clear();
     }
 }
