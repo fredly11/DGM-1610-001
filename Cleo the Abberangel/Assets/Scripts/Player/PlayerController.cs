@@ -31,7 +31,6 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		moveDirection.y -= gravity;
 	
 	//	isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
@@ -39,29 +38,34 @@ public class PlayerController : MonoBehaviour
 		{
 			if (!facingright)Flip();
 			facingright = true;
-			cc.Move(new Vector3(moveSpeed, cc.velocity.y, 0));
+			moveDirection.x = moveSpeed;
 		}
 		else if (Input.GetAxis("Horizontal") < 0)
 		{
 			if(facingright)Flip();
 			facingright = false;
-			cc.Move(new Vector3(-moveSpeed, cc.velocity.y, 0));
+			moveDirection.x = -moveSpeed;
+		}
+		else
+		{
+			moveDirection.x = 0;
 		}
 
 
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
-			if (cc.isGrounded)
-			{
+		//	if (cc.isGrounded)
+		//	{
 				moveDirection.y = jumpForce;
-				cc.Move(moveDirection);
-			} else if (jumpCount.Value > 0)
-			{
-				cc.Move(moveDirection);
-				jumpCount.Value--;
-			}
-		}
 
+		//	} else if (jumpCount.Value > 0)
+		//	{
+		//		cc.Move(moveDirection);
+		//		jumpCount.Value--;
+		//	}
+		}
+		moveDirection.y -= gravity * Time.deltaTime;
+		cc.Move(moveDirection * Time.deltaTime);
 		
 	}
 

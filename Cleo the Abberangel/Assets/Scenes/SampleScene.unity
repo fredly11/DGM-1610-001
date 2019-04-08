@@ -779,7 +779,17 @@ Prefab:
     - target: {fileID: 114467054109457016, guid: a2f7c7d7c8a815147be8a5d723f56d63,
         type: 2}
       propertyPath: moveSpeed
-      value: 0.1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114467054109457016, guid: a2f7c7d7c8a815147be8a5d723f56d63,
+        type: 2}
+      propertyPath: jumpForce
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114467054109457016, guid: a2f7c7d7c8a815147be8a5d723f56d63,
+        type: 2}
+      propertyPath: gravity
+      value: 9.8
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 61620692202219310, guid: a2f7c7d7c8a815147be8a5d723f56d63, type: 2}
