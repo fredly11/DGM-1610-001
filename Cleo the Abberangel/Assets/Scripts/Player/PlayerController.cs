@@ -7,63 +7,57 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-	private Rigidbody2D rb;
+	private CharacterController cc;
 	public bool isGrounded;
 	public float moveSpeed;
 	public float jumpForce;
+	public float gravity;
 	public Transform groundCheck;
 	public float groundCheckRadius;
 	public LayerMask groundLayer;
-	public float friction;
+
 	public FloatData jumpCount;
 	private bool facingright = true;
 	public Transform spawnPoint;
+	private Vector3 moveDirection = Vector3.zero;
 
 	// Use this for initialization
 	void Start ()
 	{
-		rb = GetComponent<Rigidbody2D>();
+		cc = GetComponent<CharacterController>();
 		groundLayer = LayerMask.GetMask("World");
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
+		moveDirection.y -= gravity;
 	
-		isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+	//	isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
 		if (Input.GetAxis("Horizontal") > 0)
 		{
 			if (!facingright)Flip();
 			facingright = true;
-			rb.velocity = new Vector2(moveSpeed, rb.velocity.y);	
+			cc.Move(new Vector3(moveSpeed, cc.velocity.y, 0));
 		}
 		else if (Input.GetAxis("Horizontal") < 0)
 		{
 			if(facingright)Flip();
 			facingright = false;
-			rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
-			print("Printing");
+			cc.Move(new Vector3(-moveSpeed, cc.velocity.y, 0));
 		}
-		else if (Input.GetAxis("Horizontal") == 0 && isGrounded && rb.velocity.x > 0)
-		{
-			rb.velocity = new Vector2(rb.velocity.x - friction, rb.velocity.y);
-			if(rb.velocity.x < 0) rb.velocity = new Vector2(0, rb.velocity.y); 
-		}
-		else if (Input.GetAxis("Horizontal") == 0 && isGrounded && rb.velocity.x < 0)
-		{
-			rb.velocity = new Vector2(rb.velocity.x + friction, rb.velocity.y);
-			if(rb.velocity.x > 0) rb.velocity = new Vector2(0, rb.velocity.y); 
-		}
+
 
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
-			if (isGrounded)
+			if (cc.isGrounded)
 			{
-				rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+				moveDirection.y = jumpForce;
+				cc.Move(moveDirection);
 			} else if (jumpCount.Value > 0)
 			{
-				rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+				cc.Move(moveDirection);
 				jumpCount.Value--;
 			}
 		}

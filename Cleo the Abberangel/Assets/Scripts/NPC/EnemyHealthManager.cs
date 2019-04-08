@@ -40,7 +40,7 @@ public class EnemyHealthManager : MonoBehaviour
 		deathEvent.Invoke();
 	}
 
-	private void OnTriggerEnter2D(Collider2D other)
+	private void OnTriggerEnter(Collider other)
 	{ 
 
 		if (other.gameObject.tag == "Projectile")

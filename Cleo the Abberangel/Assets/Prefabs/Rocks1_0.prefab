@@ -26,7 +26,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1893502528570290
 GameObject:
   m_ObjectHideFlags: 0
@@ -51,9 +51,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4604334575029352}
-  - component: {fileID: 58803366056150754}
   - component: {fileID: 95413579099299082}
   - component: {fileID: 114867501886369210}
+  - component: {fileID: 136530402357758856}
   m_Layer: 9
   m_Name: Rocks1_0
   m_TagString: Untagged
@@ -68,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1982389872390536}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -44.425594, y: -1.2598033, z: 0.10546875}
+  m_LocalPosition: {x: -11.378744, y: 10.598993, z: 0.10546875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4907244641065208}
@@ -117,21 +117,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.1}
   serializedVersion: 2
   m_Radius: 1.02
---- !u!58 &58803366056150754
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1982389872390536}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 6d5f9b2a1b82be3428b38a67a3d9f629, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.21}
-  serializedVersion: 2
-  m_Radius: 1
 --- !u!95 &95413579099299082
 Animator:
   serializedVersion: 3
@@ -163,6 +148,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveDistance: 3
   moveSpeed: 0.1
+  startClosed: 0
+--- !u!136 &136530402357758856
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1982389872390536}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.84012794
+  m_Height: 2.400528
+  m_Direction: 1
+  m_Center: {x: -0.033346176, y: 0.020008087, z: 0}
 --- !u!212 &212476485374580918
 SpriteRenderer:
   m_ObjectHideFlags: 1

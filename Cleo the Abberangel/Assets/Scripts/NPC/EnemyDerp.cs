@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 
 public class EnemyDerp : MonoBehaviour
 {
-	private Rigidbody2D rb;
+	private Rigidbody rb;
 	public Transform player;
 	public FloatData damage;
 	private bool moving = true;
@@ -14,7 +14,7 @@ public class EnemyDerp : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		rb = GetComponent<Rigidbody2D>();
+		rb = GetComponent<Rigidbody>();
 		player = GameObject.Find("Cleo").transform;
 	}
 	

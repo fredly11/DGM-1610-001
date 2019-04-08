@@ -9,11 +9,11 @@ public class Animal : MonoBehaviour
 	public float damage;
 	public float moveSpeed;
 
-	private Rigidbody2D rb;
+	private Rigidbody rb;
 	// Use this for initialization
 	void Start ()
 	{
-		rb = GetComponent<Rigidbody2D>();
+		rb = GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame

@@ -23,6 +23,7 @@
           <e p="NPC" t="Include">
             <e p="Animal.cs" t="Include" />
             <e p="Bird.cs" t="Include" />
+            <e p="enemyAI.cs" t="Include" />
             <e p="EnemyDerp.cs" t="Include" />
             <e p="EnemyHealthManager.cs" t="Include" />
             <e p="Fox.cs" t="Include" />

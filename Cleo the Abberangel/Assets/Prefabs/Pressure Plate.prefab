@@ -35,8 +35,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4308094186236624}
-  - component: {fileID: 61829797174924100}
   - component: {fileID: 114941759397087476}
+  - component: {fileID: 65217244152148798}
   m_Layer: 0
   m_Name: Pressure Plate
   m_TagString: Untagged
@@ -132,7 +132,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1260673977288840}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.48, y: 4.169, z: 0}
+  m_LocalPosition: {x: -7.6769996, y: 7.114033, z: 0}
   m_LocalScale: {x: 0.11256, y: 0.11256, z: 0.11256}
   m_Children:
   - {fileID: 4235404562901662}
@@ -191,31 +191,18 @@ Transform:
   m_Father: {fileID: 4235404562901662}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61829797174924100
-BoxCollider2D:
+--- !u!65 &65217244152148798
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1260673977288840}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10, y: 4.41}
-    newSize: {x: 10, y: 4.41}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 4.41}
-  m_EdgeRadius: 0
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95934148091765282
 Animator:
   serializedVersion: 3
@@ -245,10 +232,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79da600875809e64eb468ac8d5d1fac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorToOpen: {fileID: 0}
-  targetPoint: {fileID: 0}
-  openSpeed: 0.02
-  isOpening: 0
   triggered:
     m_PersistentCalls:
       m_Calls:
