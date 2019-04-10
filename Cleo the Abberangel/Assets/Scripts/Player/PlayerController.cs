@@ -54,14 +54,14 @@ public class PlayerController : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
-		//	if (cc.isGrounded)
-		//	{
+			if (cc.isGrounded)
+			{
 				moveDirection.y = jumpForce;
 
-		//	} else if (jumpCount.Value > 0)
+			} else if (jumpCount.Value > 0)
 		//	{
-		//		cc.Move(moveDirection);
-		//		jumpCount.Value--;
+				moveDirection.y = jumpForce;
+				jumpCount.Value--;
 		//	}
 		}
 		moveDirection.y -= gravity * Time.deltaTime;
