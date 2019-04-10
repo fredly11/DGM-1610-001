@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Experimental.Audio.Google;
 using UnityEngine.Experimental.UIElements;
@@ -16,7 +17,7 @@ public class ProjectileAttack : MonoBehaviour
 	private bool firing;
 	private Vector3 mousePosition;
 	private GameObject newProjectile;
-	private Rigidbody2D arrowBody;
+	private Rigidbody arrowBody;
 	
 
 	private float currentTime;
@@ -53,12 +54,12 @@ public class ProjectileAttack : MonoBehaviour
 	void FireProjectile()
 	{
 		mousePosition = Input.mousePosition;
-		mousePosition.z = firePoint.transform.position.z -mainCam.transform.position.z;
+		mousePosition.z = firePoint.transform.position.z - mainCam.transform.position.z;
 		mousePosition = mainCam.ScreenToWorldPoint (mousePosition);
 		var q = Quaternion.FromToRotation (Vector3.up, mousePosition - firePoint.transform.position);
 
 		newProjectile = Instantiate (projectile, firePoint.position, q);
-		arrowBody = newProjectile.GetComponent<Rigidbody2D> ();
+		arrowBody = newProjectile.GetComponent<Rigidbody> ();
 
 		arrowBody.velocity = newProjectile.transform.up * thrust;
 	}
