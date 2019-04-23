@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4959021052253748}
   - component: {fileID: 135406088493357512}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: Blink Area
   m_TagString: Blink
   m_Icon: {fileID: 0}

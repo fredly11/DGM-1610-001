@@ -9,8 +9,8 @@ public class ArrowTrigger : MonoBehaviour
 	
 	private void OnTriggerEnter(Collider other)
 	{
-		if (other.tag == "Projectile")
-		{
+
+		if (other.tag == "Projectile"){
 			triggerEvent.Invoke();
 		}
 	}
